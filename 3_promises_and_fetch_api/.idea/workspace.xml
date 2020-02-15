@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50875b07-0c44-4db3-b296-04e5d2035cc6" name="Default Changelist" comment="" />
+    <list default="true" id="50875b07-0c44-4db3-b296-04e5d2035cc6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +15,7 @@
     </execution>
   </component>
   <component name="ProjectId" id="1XoUKMIJsoDsBp8MYJ72uEVHhi1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -21,7 +24,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../4_service_workers_caching" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -34,6 +37,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581711875173</updated>
       <workItem from="1581711878050" duration="2485000" />
+      <workItem from="1581790568789" duration="793000" />
     </task>
     <servers />
   </component>
@@ -41,6 +45,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1218" y="274" width="424" height="484" key="FileChooserDialogImpl" timestamp="1581791486016">
+      <screen x="0" y="27" width="1920" height="1005" />
+    </state>
+    <state x="1218" y="274" width="424" height="484" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1005@0.27.1920.1005" timestamp="1581791486016" />
     <state x="1091" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1581790646962">
       <screen x="0" y="27" width="1920" height="1005" />
     </state>
