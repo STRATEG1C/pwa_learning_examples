@@ -1,27 +1,17 @@
-var CACHE_STATIC_NAME = 'static-v4';
+
+var CACHE_STATIC_NAME = 'static-v10';
 var CACHE_DYNAMIC_NAME = 'dynamic-v2';
 
-self.addEventListener('install', function (event) {
+self.addEventListener('install', function(event) {
   console.log('[Service Worker] Installing Service Worker ...', event);
-
-  // Initialize cache, open cache process
   event.waitUntil(
     caches.open(CACHE_STATIC_NAME)
-      .then(function (cache) {
+      .then(function(cache) {
         console.log('[Service Worker] Precaching App Shell');
-
-        // Make request to the file, download it and store to be offline
-        // Here we only store
-        // Here we cache request URLs
-
-        // cache.add('/');
-        // cache.add('/index.html');
-        // cache.add('/src/js/app.js');
-
-        // Add all URLs in array
         cache.addAll([
           '/',
           '/index.html',
+          '/offline.html',
           '/src/js/app.js',
           '/src/js/feed.js',
           '/src/js/promise.js',
@@ -35,55 +25,47 @@ self.addEventListener('install', function (event) {
           'https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css'
         ]);
       })
-  );
+  )
 });
 
-self.addEventListener('activate', function (event) {
+self.addEventListener('activate', function(event) {
   console.log('[Service Worker] Activating Service Worker ....', event);
-
-  // Remove old caches
   event.waitUntil(
     caches.keys()
       .then(function(keyList) {
         return Promise.all(keyList.map(function(key) {
           if (key !== CACHE_STATIC_NAME && key !== CACHE_DYNAMIC_NAME) {
-            console.log('[Service worker] Removing old cache', key);
+            console.log('[Service Worker] Removing old cache.', key);
             return caches.delete(key);
           }
         }));
       })
   );
-
   return self.clients.claim();
 });
 
-self.addEventListener('fetch', function (event) {
-  // Here we retrieve cached files
+self.addEventListener('fetch', function(event) {
   event.respondWith(
-    // Check if we have requested file
     caches.match(event.request)
       .then(function(response) {
-        // If have then load it
         if (response) {
           return response;
         } else {
-          // Else, continue request to server
           return fetch(event.request)
-            // Dynamic caching implementation
             .then(function(res) {
-              caches.open(CACHE_DYNAMIC_NAME)
+              return caches.open(CACHE_DYNAMIC_NAME)
                 .then(function(cache) {
                   cache.put(event.request.url, res.clone());
                   return res;
-                });
+                })
             })
-            // Fetching errors
             .catch(function(err) {
-
+              return caches.open(CACHE_STATIC_NAME)
+                .then(function(cache) {
+                  return cache.match('/offline.html');
+                });
             });
         }
       })
   );
-
-
 });
