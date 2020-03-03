@@ -5,6 +5,11 @@ var sharedMomentsArea = document.querySelector('#shared-moments');
 
 function openCreatePostModal() {
   createPostArea.style.display = 'block';
+
+  setTimeout(function() {
+    createPostArea.style.transform = 'translateY(0)';
+  }, 1);
+
   if (deferredPrompt) {
     deferredPrompt.prompt();
 
@@ -16,35 +21,36 @@ function openCreatePostModal() {
       } else {
         console.log('User added to home screen');
       }
-
-      // Example how we can delete serviceWorkers
-      // if ('serviceWorker' in navigator) {
-      //   navigator.serviceWorker.getRegistrations()
-      //     .then(function(registrations) {
-      //       for (var i = 0; i < registrations.length; i++) {
-      //         registrations[i].unregister();
-      //       }
-      //     })
-      // }
     });
 
     deferredPrompt = null;
   }
+
+  // if ('serviceWorker' in navigator) {
+  //   navigator.serviceWorker.getRegistrations()
+  //     .then(function(registrations) {
+  //       for (var i = 0; i < registrations.length; i++) {
+  //         registrations[i].unregister();
+  //       }
+  //     })
+  // }
 }
 
 function closeCreatePostModal() {
-  createPostArea.style.display = 'none';
+  setTimeout(function() {
+    createPostArea.style.transform = 'translateY(100vh)';
+  }, 1);
+
+  // createPostArea.style.display = 'none';
 }
 
 shareImageButton.addEventListener('click', openCreatePostModal);
 
 closeCreatePostModalButton.addEventListener('click', closeCreatePostModal);
 
+// Currently not in use, allows to save assets in cache on demand otherwise
 function onSaveButtonClicked(event) {
   console.log('clicked');
-
-  // Cache on demand
-  // This code not in use
   if ('caches' in window) {
     caches.open('user-requested')
       .then(function(cache) {
@@ -60,23 +66,22 @@ function clearCards() {
   }
 }
 
-function createCard() {
+function createCard(data) {
   var cardWrapper = document.createElement('div');
   cardWrapper.className = 'shared-moment-card mdl-card mdl-shadow--2dp';
   var cardTitle = document.createElement('div');
   cardTitle.className = 'mdl-card__title';
-  cardTitle.style.backgroundImage = 'url("/src/images/sf-boat.jpg")';
+  cardTitle.style.backgroundImage = 'url(' + data.image + ')';
   cardTitle.style.backgroundSize = 'cover';
-  cardTitle.style.height = '180px';
   cardWrapper.appendChild(cardTitle);
   var cardTitleTextElement = document.createElement('h2');
   cardTitleTextElement.style.color = 'white';
   cardTitleTextElement.className = 'mdl-card__title-text';
-  cardTitleTextElement.textContent = 'San Francisco Trip';
+  cardTitleTextElement.textContent = data.title;
   cardTitle.appendChild(cardTitleTextElement);
   var cardSupportingText = document.createElement('div');
   cardSupportingText.className = 'mdl-card__supporting-text';
-  cardSupportingText.textContent = 'In San Francisco';
+  cardSupportingText.textContent = data.location;
   cardSupportingText.style.textAlign = 'center';
   // var cardSaveButton = document.createElement('button');
   // cardSaveButton.textContent = 'Save';
@@ -87,42 +92,38 @@ function createCard() {
   sharedMomentsArea.appendChild(cardWrapper);
 }
 
-/****** Network then cache strategy ******/
-var url = 'https://httpbin.org/post';
-var networkDateReceived = false;
+function updateUI(data) {
+  for (var i = 0; i < data.length; i++) {
+    createCard(data[i]);
+  }
+}
 
-fetch(url, {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    'Accept': 'application/json'
-  },
-  body: JSON.stringify({
-    messsage: 'Some message'
-  })
-})
+var url = 'https://pwa-learning-a4603.firebaseio.com/posts.json';
+var networkDataReceived = false;
+
+fetch(url)
   .then(function(res) {
     return res.json();
   })
   .then(function(data) {
-    networkDateReceived = true;
+    networkDataReceived = true;
     console.log('From web', data);
+
+    var dataArray = [];
+    for (var key in data) {
+      dataArray.push(data[key]);
+    }
+
     clearCards();
-    createCard();
+    updateUI(dataArray);
   });
 
-if ('caches' in window) {
-  caches.match(url)
-    .then(function(response) {
-      if (response) {
-        return response.json()
-      }
-    })
+if ('indexedDB' in window) {
+  readAllData('posts')
     .then(function(data) {
-      console.log('From cache', data);
-      if (!networkDateReceived) {
-        createCard();
+      if (!networkDataReceived) {
+        console.log('From cache', data);
+        updateUI(data);
       }
-    })
+    });
 }
-/****************************************************/

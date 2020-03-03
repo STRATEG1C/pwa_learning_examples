@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37527e93-4879-4383-8e53-02e5f83f22b9" name="Default Changelist" comment="" />
+    <list default="true" id="37527e93-4879-4383-8e53-02e5f83f22b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6_indexed_db_and_dynamic_data/public/src/js/idb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6_indexed_db_and_dynamic_data/public/src/js/utility.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5_service_workers_caching_advanced/public/src/js/feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_service_workers_caching_advanced/public/src/js/feed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5_service_workers_caching_advanced/public/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_service_workers_caching_advanced/public/sw.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +19,9 @@
       <executable />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1XRvn56Ign4lqdXKWeNOj94ZffI" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -20,9 +30,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/3_promises_and_fetch_api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Fireworks/backend" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/6_indexed_db_and_dynamic_data/public/src/js" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -36,6 +52,11 @@
       <updated>1581021884764</updated>
       <workItem from="1581021890704" duration="640000" />
       <workItem from="1581711041730" duration="615000" />
+      <workItem from="1582375764074" duration="5968000" />
+      <workItem from="1582440002613" duration="7090000" />
+      <workItem from="1582479747425" duration="8547000" />
+      <workItem from="1582649005134" duration="5076000" />
+      <workItem from="1582748125300" duration="50000" />
     </task>
     <servers />
   </component>
@@ -43,13 +64,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1223" y="274" width="424" height="484" key="FileChooserDialogImpl" timestamp="1581711870966">
+    <state x="1223" y="274" width="424" height="484" key="FileChooserDialogImpl" timestamp="1582748171579">
       <screen x="0" y="27" width="1920" height="1005" />
     </state>
-    <state x="1223" y="274" width="424" height="484" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1005@0.27.1920.1005" timestamp="1581711870966" />
-    <state x="1096" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1581711855448">
+    <state x="1223" y="274" width="424" height="484" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1005@0.27.1920.1005" timestamp="1582748171579" />
+    <state x="1096" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1582748152593">
       <screen x="0" y="27" width="1920" height="1005" />
     </state>
-    <state x="1096" y="343" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.27.1920.1005@0.27.1920.1005" timestamp="1581711855448" />
+    <state x="1096" y="343" key="com.intellij.ide.util.TipDialog/0.27.1920.1005@0.27.1920.1005" timestamp="1582649005741" />
+    <state x="1096" y="343" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.27.1920.1005@0.27.1920.1005" timestamp="1582748152593" />
   </component>
 </project>
