@@ -97,7 +97,7 @@ function updateUI(data) {
   }
 }
 
-var url = 'https://pwagram-99adf.firebaseio.com/posts.json';
+var url = 'https://pwa-learning-a4603.firebaseio.com/posts.json';
 var networkDataReceived = false;
 
 fetch(url)
@@ -125,7 +125,7 @@ if ('indexedDB' in window) {
 }
 
 function sendData() {
-  fetch('https://us-central1-pwa-learning-a4603.cloudfunctions.net/storePostData', {
+  fetch('https://pwa-learning-a4603.firebaseio.com/posts.json', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37527e93-4879-4383-8e53-02e5f83f22b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6_indexed_db_and_dynamic_data/public/src/js/idb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6_indexed_db_and_dynamic_data/public/src/js/utility.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PWA_Learning.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_service_workers_caching_advanced/public/src/js/feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_service_workers_caching_advanced/public/src/js/feed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_service_workers_caching_advanced/public/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_service_workers_caching_advanced/public/sw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/8_background_sync/public/src/js/feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/8_background_sync/public/src/js/feed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/8_background_sync/public/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/8_background_sync/public/sw.js" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,15 +31,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Fireworks/backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Practicing/Fireworks/backend" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/6_indexed_db_and_dynamic_data/public/src/js" />
-    </key>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -52,26 +59,35 @@
       <updated>1581021884764</updated>
       <workItem from="1581021890704" duration="640000" />
       <workItem from="1581711041730" duration="615000" />
-      <workItem from="1582375764074" duration="5968000" />
-      <workItem from="1582440002613" duration="7090000" />
-      <workItem from="1582479747425" duration="8547000" />
-      <workItem from="1582649005134" duration="5076000" />
-      <workItem from="1582748125300" duration="50000" />
+      <workItem from="1582114443425" duration="605000" />
+      <workItem from="1583252621307" duration="3165000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="1223" y="274" width="424" height="484" key="FileChooserDialogImpl" timestamp="1582748171579">
+    <state x="1223" y="274" width="424" height="484" key="FileChooserDialogImpl" timestamp="1581711870966">
       <screen x="0" y="27" width="1920" height="1005" />
     </state>
-    <state x="1223" y="274" width="424" height="484" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1005@0.27.1920.1005" timestamp="1582748171579" />
-    <state x="1096" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1582748152593">
+    <state x="1223" y="274" width="424" height="484" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1005@0.27.1920.1005" timestamp="1581711870966" />
+    <state x="1096" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1581711855448">
       <screen x="0" y="27" width="1920" height="1005" />
     </state>
-    <state x="1096" y="343" key="com.intellij.ide.util.TipDialog/0.27.1920.1005@0.27.1920.1005" timestamp="1582649005741" />
-    <state x="1096" y="343" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.27.1920.1005@0.27.1920.1005" timestamp="1582748152593" />
+    <state x="1096" y="343" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.27.1920.1005@0.27.1920.1005" timestamp="1581711855448" />
   </component>
 </project>
