@@ -7,11 +7,11 @@ var cors = require('cors')({origin: true});
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
 
-var serviceAccount = require("./pwa_fpk.json");
+var serviceAccount = require("./serviceAccountKey.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: 'https://pwa-learning-a4603.firebaseio.com/'
+  databaseURL: "https://pwa-learning-a4603.firebaseio.com"
 });
 
 exports.storePostData = functions.https.onRequest(function(request, response) {
@@ -23,7 +23,7 @@ exports.storePostData = functions.https.onRequest(function(request, response) {
      image: request.body.image
    })
      .then(function() {
-       response.status(201).json({message: 'Data stored', id: request.body.id});
+       response.status(200).json({message: 'Data stored', id: request.body.id});
      })
      .catch(function(err) {
        response.status(500).json({error: err});

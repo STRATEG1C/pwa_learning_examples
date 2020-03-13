@@ -2,12 +2,19 @@
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "dependencies": {
+    "@google-cloud/storage": "1.7.0",
+    "busboy": "^0.3.1",
     "cors": "^2.8.5",
     "firebase-admin": "^4.2.1",
-    "firebase-functions": "^0.5.7"
+    "firebase-functions": "^0.5.7",
+    "uuid-v4": "^0.1.0",
+    "web-push": "^3.4.3"
   },
   "private": true,
   "engines": {
     "node": "8"
+  },
+  "scripts": {
+    "web-push": "web-push"
   }
 }
